@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <script language="javascript" src="validar_datos.js"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <link rel="stylesheet" href="Altasc.CSS">
+        <title>Formulario Registros de Atlas</title>
+    </head>
+    <body>
+        <?php include('conexion.php'); ?>
+        
+        <!-- Tabla de navegación en la parte superior -->
+        <table class="tabla-navegacion">
+            <tr>
+                <td><a href="Altas3.html" target="_self">INICIO</a></td>
+                <td><a href="lista.php" target="_self">CONSULTAS</a></td>
+                <td><a href="lista.php">MOSTRAR LISTA</a></td>
+                <td><a href="eliminar.php">ELIMINAR</a></td>
+                <td colspan="2"><a href="modificar.php">MODIFICAR</a></td>
+            </tr>
+        </table>
+
+        <!-- Formulario de ingreso de datos -->
+        <section class="form-registre">
+            <h4>INGRESAR DATOS DEL VISITANTE</h4>
+            <form action="guardar_datos.php" id="form1" name="form1" method="post" onsubmit="return validar(this);">
+                <!-- Campos del formulario -->
+                <p>
+                    <label for="campo_paterno"><strong>Apellido Paterno</strong></label>
+                    <input name="campo_paterno" type="text" id="campo_paterno" placeholder="Escriba su Apellido Paterno" size="30" maxlength="50" onkeyup="activar();"/>
+                </p>
+                <p>
+                    <label for="campo_materno"><strong>Apellido Materno</strong></label>
+                    <input name="campo_materno" type="text" id="campo_materno" placeholder="Escriba su Apellido Materno" size="30" maxlength="50" onkeyup="activar();"/>
+                </p>
+                <p>
+                    <label for="campo_nombre"><strong>Nombre(s)</strong></label>
+                    <input name="campo_nombre" type="text" id="campo_nombre" placeholder="Escriba su Nombre" size="30" maxlength="50" onkeyup="activar();"/>
+                </p>
+                <p>
+                    <label for="campo_telefono"><strong>Teléfono</strong></label>
+                    <input name="campo_telefono" type="text" id="campo_telefono" placeholder="Escriba su teléfono" size="30" maxlength="50" onkeyup="activar();"/>
+                </p>
+                <p>
+                    <label for="campo_ciudad"><strong>Ciudad</strong></label>
+                    <input name="campo_ciudad" type="text" id="campo_ciudad" placeholder="Escriba su ciudad" size="30" maxlength="50" onkeyup="activar();"/>
+                </p>
+                <p>
+                    <label for="campo_pais"><strong>País</strong></label>
+                    <input name="campo_pais" type="text" id="campo_pais" placeholder="Escriba su país" size="30" maxlength="50" onkeyup="activar();"/>
+                </p>
+                <p>
+                    <input type="submit" name="Submit" value="Enviar"/>
+                    <input type="reset" name="Submit2" value="Restablecer" />
+                </p>
+            </form>
+        </section>
+
+    </body>
+</html>
+

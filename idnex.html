@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de Registro</title>
+    <script src="validar_datos.js"></script>
+</head>
+<body>
+    <h1>Registro de Datos</h1>
+    <form action="guardar_datos.php" method="post" onsubmit="return validar(this);">
+        <p>Paterno: <input type="text" name="campo_paterno" id="campo_paterno" placeholder="Apellido paterno completo" required></p>
+        <p>Materno: <input type="text" name="campo_materno" id="campo_materno" placeholder="Apellido materno completo" required></p>
+        <p>Nombre: <input type="text" name="campo_nombre" id="campo_nombre" placeholder="Nombre completo" required></p>
+        <p>Telefonp: <input type="text" name="campo_telefono" id="campo_telefono" placeholder="Numero de telefono completo" required></p>
+        <p>Ciudad: <input type="text" name="campo_ciudad" id="campo_ciudad" placeholder="Nombre de ciudad completo" required></p>
+        <p>Pais: <input type="text" name="campo_pais" id="campo_pais" placeholder="Nombre de pais completo" required></p>
+        <p>
+            <input type="submit" value="Guardar">
+            <input type="reset" value="Restablecer">
+        </p>
+    </form>
+    <a href="lista.php">Ver Lista de Datos</a>
+</body>
+</html>
